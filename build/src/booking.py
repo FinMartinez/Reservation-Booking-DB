@@ -50,7 +50,7 @@ def db_connect():
         #''')
     return conn
 
-# TODO: display all reservations in the system using the information from ReservationsView
+# Display all reservations in the system using the information from ReservationsView
 def list_op(conn):
     if conn:
         print('Retrieving Reservations...') 
@@ -69,7 +69,7 @@ def list_op(conn):
         conn.commit()
 
 
-# TODO: reserve a room on a specific date and period, also saving the user who's the reservation is for
+# Reserve a room on a specific date and period, also saving the user who's the reservation is for
 def reserve_op(conn): 
     if conn:
         print('Please provide desired reservation date (YYYY-MM-dd).')
@@ -126,7 +126,7 @@ def reserve_op(conn):
                 conn.commit()
                 print('Reservation sucessfully updated!')
 
-# TODO: delete a reservation given its code
+# Delete a reservation given its code
 def delete_op(conn):
     if conn:
         with conn.cursor() as cur:
