@@ -79,7 +79,7 @@ GRANT ALL ON TABLE Reservations TO booking;
 GRANT ALL ON SEQUENCE reservations_code_seq TO booking;
 GRANT ALL ON SEQUENCE users_user_seq TO booking;
 
--- TODO: create a view called ReservationsView to retrieve all reservation information in chronological order similar to the one below
+-- A view called ReservationsView retrieves all reservation information in chronological order similar to the one below
 --  code |    date    | period |  start   |   end    |  room   |     name      
 -- ------+------------+--------+----------+----------+---------+---------------
 --     4 | 2023-06-23 | F      | 16:00:00 | 18:00:00 | JSS-230 | James Brandy
@@ -98,5 +98,5 @@ INNER JOIN Users D
 ON A."user" = D."user"
 ORDER BY A.code DESC;
 
--- once your view is created and working, run the following line
+-- Grant permissions to ReservationsView
 GRANT ALL ON TABLE ReservationsView TO booking;
